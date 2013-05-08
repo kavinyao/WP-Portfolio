@@ -1,0 +1,94 @@
+/* line 2, layout.sass */
+.alignnone {
+  margin: 5px 20px 20px 0;
+}
+
+/* line 5, layout.sass */
+.aligncenter {
+  display: block;
+  margin: 5px auto 5px auto;
+}
+
+/* line 9, layout.sass */
+.alignright {
+  float: right;
+  margin: 5px 0 20px 20px;
+}
+
+/* line 13, layout.sass */
+.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0;
+}
+
+/* line 17, layout.sass */
+.aligncenter {
+  display: block;
+  margin: 5px auto 5px auto;
+}
+
+/* line 21, layout.sass */
+a img.alignright {
+  float: right;
+  margin: 5px 0 20px 20px;
+}
+
+/* line 25, layout.sass */
+a img.alignnone {
+  margin: 5px 20px 20px 0;
+}
+
+/* line 28, layout.sass */
+a img.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0;
+}
+
+/* line 32, layout.sass */
+a img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 37, layout.sass */
+.wp-caption {
+  background: white;
+  border: 1px solid #f0f0f0;
+  max-width: 96%;
+  padding: 5px 3px 10px;
+  text-align: center;
+}
+
+/* line 44, layout.sass */
+.wp-caption.alignnone {
+  margin: 5px 20px 20px 0;
+}
+
+/* line 47, layout.sass */
+.wp-caption.alignleft {
+  margin: 5px 20px 20px 0;
+}
+
+/* line 50, layout.sass */
+.wp-caption.alignright {
+  margin: 5px 0 20px 20px;
+}
+
+/* line 53, layout.sass */
+.wp-caption img {
+  border: 0 none;
+  height: auto;
+  margin: 0;
+  max-width: 98.5%;
+  padding: 0;
+  width: auto;
+}
+
+/* line 61, layout.sass */
+.wp-caption p.wp-caption-text {
+  font-size: 11px;
+  line-height: 17px;
+  margin: 0;
+  padding: 0 4px 5px;
+}

@@ -1,0 +1,141 @@
+@import "compass/reset"
+@import "include/layout"
+
+body
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+  font-weight: 300
+  font-size: 11px
+
+h1, h2, h3, h4, h5, h6
+  font-weight: inherit
+
+a, a:visited
+  text-decoration: none
+  color: inherit
+
+.col-full
+  width: 560px
+  margin: 0 auto
+
+.bisection:after, .col-full:after, #main:after, .section-elements:after
+  clear: both
+  content: "."
+  display: block
+  height: 0
+  visibility: hidden
+
+.bisection
+  .section-left
+    width: 140px
+    float: left
+
+  .section-right
+    width: 420px
+    float: left
+
+#header, #main
+  padding-bottom: 15px
+  border-bottom: 1px solid #eee
+
+#header-wrapper
+  position: relative
+
+/* h1 in header */
+#header
+  h1
+    margin-top: 10px
+    font-size: 20px
+    font-weight: bold
+    text-transform: uppercase
+    margin-bottom: 30px
+
+    & + p
+      color: #a6b4bc
+      text-transform: upper
+
+  .section-element
+    width: 104px
+    float: left
+
+  .section-element h2
+    font-size: 15px
+    text-transform: uppercase
+    display: inline-block
+
+  .section-element h2.active
+    border-bottom: 2px solid #ddd
+
+#projects-trigger:hover
+  cursor: pointer
+
+#projects
+  margin-top: 10px
+  margin-left: 104px
+  color: #737373
+
+  li
+    display: block
+    margin-right: 10px
+    padding: 0 0 5px
+    font-size: 11px
+    font-weight: bold
+
+#main-wrapper
+  padding: 20px 0 10px
+
+#main
+  h1
+    font-size: 12px
+
+  h2
+    margin-bottom: 5px
+
+  .section
+    width: 140px
+    float: left
+
+  .section h1
+    margin-bottom: 15px
+
+.project-title
+  padding: 5px 10px
+  color: #fff
+  background: rgba(0, 0, 0, .5)
+  font-weight: normal
+
+  &:hover
+    background: rgba(0, 0, 0, .8)
+
+.post-part
+  margin-bottom: 10px
+
+.post-meta
+  text-transform: uppercase
+  color: #666
+
+#footer-sidebar
+  .xoxo
+    width: 220px
+    float: left
+    padding: 20px 10px 0 0
+
+  h3
+    border-bottom: 1px dotted #aaa
+    margin: 0 0 0.7em
+    padding: 0 0 5px
+
+  ul
+    clear: both
+    list-style-image: url("images/arrow.png")
+    list-style-position: outside
+    padding-left: 20px
+
+    li
+      list-style: inherit
+      border-bottom: 1px dotted #363848
+      line-height: 18px
+      padding: 6px 0
+
+#footer
+  padding: 20px 0 30px
+  color: #aaa
