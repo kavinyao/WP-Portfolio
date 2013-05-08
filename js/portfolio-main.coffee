@@ -8,12 +8,6 @@ $ ()->
 
         return margin_top
 
-    if portfolio.conf.is_home
-        $('body').animate
-            marginTop: get_proper_body_top_margin(),
-            opacity: 1.0
-        , 'slow'
-
     if portfolio.conf.is_singular
         # show/hide project list
         $('#projects-trigger').toggle ()->
@@ -46,3 +40,24 @@ $ ()->
         $('body').animate
             marginTop: get_proper_body_top_margin()
         $('.projects').show()
+
+    if portfolio.conf.is_home
+        # handle hash on initial load
+        post_exists = false
+
+        hash = location.hash.trim()
+        if hash.substring(0, 3) == '#!/'
+            slug = hash.substring(3)
+            $the_post = $(".projects .project-load-trigger[data-slug=#{slug}]")
+            if $the_post.length
+                $the_post.click()
+                post_exists = true
+
+        # set margin-top on body if
+        # 1. no valid hash, or
+        # 2. the related post slug is not in list
+        initial_margin_top = if post_exists then 0 else get_proper_body_top_margin()
+        $('body').animate
+            marginTop: initial_margin_top,
+            opacity: 1.0
+        , 'slow'
