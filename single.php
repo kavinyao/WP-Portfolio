@@ -1,7 +1,12 @@
-<?php get_header(); ?>
+<?php if(! portfolio_is_ajax()): ?>
+<? get_header(); ?>
 
 <div id="main-wrapper">
     <div id="main" class="col-full">
+<?php else: ?>
+    <div class="single-project">
+        <div><a class="back-to-projects">&laquo;</a></div>
+<?php endif; ?>
         <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
         <div class="bisection">
             <div class="section-left">&nbsp;</div>
@@ -33,7 +38,10 @@
             </div>
         </div>
         <?php endwhile; // end of the loop. ?>
+<?php if(! portfolio_is_ajax()): ?>
     </div>
 </div>
-
 <?php get_footer(); ?>
+<?php else: ?>
+    </div>
+<?php endif; ?>

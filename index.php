@@ -2,17 +2,15 @@
 
 <div id="main-wrapper">
     <div id="main" class="col-full">
-        <div class="bisection">
+        <div class="bisection projects">
             <div class="section-left">&nbsp;
             </div>
             <div class="section-right">
-			<?php
-			/* Run the loop to output the posts.
-			 * If you want to overload this in a child theme then include a file
-			 * called loop-index.php and that will be used instead.
-			 */
-			 get_template_part( 'loop', 'index' );
-            ?>
+            <? if(have_posts()): ?>
+                <? while(have_posts()): the_post(); ?>
+                <h2><a class="project-load-trigger" href="#!/<?php echo esc_attr($post->post_name); ?>" data-href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Project %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+                <? endwhile; ?>
+            <? endif; ?>
             </div>
         </div>
     </div>

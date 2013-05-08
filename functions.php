@@ -87,6 +87,7 @@ function portfolio_register_assets() {
     wp_localize_script('portfolio-main', 'portfolio', array(
         'conf' => array(
             'is_singular' => is_singular(),
+            'is_home' => is_home(),
         )
     ));
 }
@@ -120,4 +121,9 @@ function portfolio_show_slide_images() {
         $image_url = $image_attrs[0];
         echo "<a href=\"{$image_url}\" class=\"slide\" rel=\"slideshow\">{$img}</a>";
     }
+}
+
+function portfolio_is_ajax() {
+    return !empty($_SERVER['HTTP_X_REQUESTED_WITH'])
+        && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest';
 }
