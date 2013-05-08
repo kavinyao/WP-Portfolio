@@ -1,5 +1,5 @@
 $ ()->
-    if portfolio.conf.is_single
+    if portfolio.conf.is_singular
         # show/hide project list
         $('#projects-trigger').toggle ()->
             $('#projects').slideDown 'fast'
