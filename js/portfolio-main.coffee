@@ -21,15 +21,15 @@ $ ()->
         , ()->
             $('#projects').slideUp 'fast'
 
-        # enable fancybox on single page
-        $('.slide').fancybox()
-
     $('#main').on 'click', '.projects .project-load-trigger', ()->
         ($.get $(this).data 'href').done (html)->
             $('.projects').hide()
             $('body').animate
                 marginTop: 0
+
             $('#main').append html
+            # enable fancybox
+            $('.slide').fancybox()
     .on 'click', '.back-to-projects', ()->
         $(this).closest('.single-project').remove()
         $('body').animate

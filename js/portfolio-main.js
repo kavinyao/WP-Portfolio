@@ -26,7 +26,6 @@
       }, function() {
         return $('#projects').slideUp('fast');
       });
-      $('.slide').fancybox();
     }
     return $('#main').on('click', '.projects .project-load-trigger', function() {
       return ($.get($(this).data('href'))).done(function(html) {
@@ -34,7 +33,8 @@
         $('body').animate({
           marginTop: 0
         });
-        return $('#main').append(html);
+        $('#main').append(html);
+        return $('.slide').fancybox();
       });
     }).on('click', '.back-to-projects', function() {
       $(this).closest('.single-project').remove();

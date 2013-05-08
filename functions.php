@@ -76,13 +76,10 @@ function portfolio_register_assets() {
     wp_deregister_script('jquery');
     wp_enqueue_script('jquery', "{$base_url}/js/jquery.min.js", false, '1.8.3', true);
 
-    if(is_singular()) {
-        wp_enqueue_style('fancybox', "{$base_url}/js/fancybox/jquery.fancybox-1.3.4.css");
-        wp_enqueue_script('fancybox', "{$base_url}/js/fancybox/jquery.fancybox-1.3.4.pack.js", array('jquery'), '1.3.4', true);
-    }
+    wp_enqueue_style('fancybox', "{$base_url}/js/fancybox/jquery.fancybox-1.3.4.css");
+    wp_enqueue_script('fancybox', "{$base_url}/js/fancybox/jquery.fancybox-1.3.4.pack.js", array('jquery'), '1.3.4', true);
 
-    // notice the position so that it's loaded after fancybox
-    wp_enqueue_script('portfolio-main', "{$base_url}/js/portfolio-main.js", array('jquery'), '1.0', true);
+    wp_enqueue_script('portfolio-main', "{$base_url}/js/portfolio-main.js", array('jquery', 'fancybox'), '1.0', true);
     // put all config in array to avoid polluting boolean values
     wp_localize_script('portfolio-main', 'portfolio', array(
         'conf' => array(

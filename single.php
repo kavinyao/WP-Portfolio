@@ -19,6 +19,7 @@
         <div class="bisection">
             <div class="section-left">
                 <?php portfolio_show_slide_images(); ?>
+&nbsp;
             </div>
             <div class="section-right">
                 <div class="post-part">
