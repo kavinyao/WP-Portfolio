@@ -21,8 +21,16 @@ $ ()->
         , ()->
             $('#projects').slideUp 'fast'
 
-    $('#main').on 'click', '.projects .project-load-trigger', ()->
-        ($.get $(this).data 'href').done (html)->
+    $('#main').on 'click', '.projects .project-load-trigger', (e)->
+        e.preventDefault()
+
+        url = $(this).attr 'href'
+        slug = $(this).data 'slug'
+
+        ($.get url).done (html)->
+            # change hash for readability
+            location.hash = "#!/#{slug}"
+
             $('.projects').hide()
             $('body').animate
                 marginTop: 0
@@ -31,6 +39,9 @@ $ ()->
             # enable fancybox
             $('.slide').fancybox()
     .on 'click', '.back-to-projects', ()->
+        # revert hash
+        location.hash = '#'
+
         $(this).closest('.single-project').remove()
         $('body').animate
             marginTop: get_proper_body_top_margin()

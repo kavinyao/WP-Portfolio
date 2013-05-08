@@ -27,8 +27,14 @@
         return $('#projects').slideUp('fast');
       });
     }
-    return $('#main').on('click', '.projects .project-load-trigger', function() {
-      return ($.get($(this).data('href'))).done(function(html) {
+    return $('#main').on('click', '.projects .project-load-trigger', function(e) {
+      var slug, url;
+
+      e.preventDefault();
+      url = $(this).attr('href');
+      slug = $(this).data('slug');
+      return ($.get(url)).done(function(html) {
+        location.hash = "#!/" + slug;
         $('.projects').hide();
         $('body').animate({
           marginTop: 0
@@ -37,6 +43,7 @@
         return $('.slide').fancybox();
       });
     }).on('click', '.back-to-projects', function() {
+      location.hash = '#';
       $(this).closest('.single-project').remove();
       $('body').animate({
         marginTop: get_proper_body_top_margin()
