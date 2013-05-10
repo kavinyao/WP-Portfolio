@@ -124,3 +124,13 @@ function portfolio_is_ajax() {
     return !empty($_SERVER['HTTP_X_REQUESTED_WITH'])
         && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest';
 }
+
+function portfolio_home_body_style() {
+    global $wp_query;
+    // thou should have at least one post...
+    $estimated_body_height = 204 + ($wp_query->post_count - 1) * 16;
+    $estimated_visible_height = 700;// heuristic value
+    // 3/7 is consistent with js
+    $margin_top = (int) 3 * ($estimated_visible_height - $estimated_body_height) / 7;
+    return "style=\"margin-top:{$margin_top}px;\"";
+}

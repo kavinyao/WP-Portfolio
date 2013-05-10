@@ -7,7 +7,7 @@
         <?php wp_head(); ?>
     </head>
 
-    <body <?php body_class(); ?><?php if(is_home()): ?>style="opacity: 0.3;"<?php endif; ?>>
+    <body <?php body_class(); ?><?php if(is_home()) echo ' ' . portfolio_home_body_style(); ?>>
         <div id="header-wrapper">
             <div id="header" class="col-full">
                 <h1>
