@@ -1,5 +1,5 @@
 <?php if(! portfolio_is_ajax()): ?>
-<? get_header(); ?>
+<?php get_header(); ?>
 
 <div id="main-wrapper">
     <div id="main" class="col-full">
