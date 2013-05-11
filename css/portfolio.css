@@ -274,71 +274,81 @@ a, a:visited {
 }
 
 /* line 91, portfolio.sass */
+.back-to-projects {
+  opacity: 0.5;
+}
+/* line 93, portfolio.sass */
+.back-to-projects:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* line 97, portfolio.sass */
 #main-wrapper {
   padding: 20px 0 10px;
 }
 
-/* line 95, portfolio.sass */
+/* line 101, portfolio.sass */
 #main h1 {
   font-size: 12px;
 }
-/* line 98, portfolio.sass */
+/* line 104, portfolio.sass */
 #main h2 {
   margin-bottom: 5px;
 }
-/* line 101, portfolio.sass */
+/* line 107, portfolio.sass */
 #main .section {
   width: 140px;
   float: left;
 }
-/* line 105, portfolio.sass */
+/* line 111, portfolio.sass */
 #main .section h1 {
   margin-bottom: 15px;
 }
 
-/* line 108, portfolio.sass */
+/* line 114, portfolio.sass */
 .project-title {
   padding: 5px 10px;
   color: white;
   background: rgba(0, 0, 0, 0.5);
   font-weight: normal;
 }
-/* line 114, portfolio.sass */
+/* line 120, portfolio.sass */
 .project-title:hover {
   background: rgba(0, 0, 0, 0.8);
 }
 
-/* line 117, portfolio.sass */
+/* line 123, portfolio.sass */
 .post-part {
   margin-bottom: 10px;
 }
 
-/* line 120, portfolio.sass */
+/* line 126, portfolio.sass */
 .post-meta {
   text-transform: uppercase;
   color: #666666;
 }
 
-/* line 125, portfolio.sass */
+/* line 131, portfolio.sass */
 #footer-sidebar .xoxo {
   width: 220px;
   float: left;
   padding: 20px 10px 0 0;
 }
-/* line 130, portfolio.sass */
+/* line 136, portfolio.sass */
 #footer-sidebar h3 {
   border-bottom: 1px dotted #aaaaaa;
   margin: 0 0 0.7em;
   padding: 0 0 5px;
 }
-/* line 135, portfolio.sass */
+/* line 141, portfolio.sass */
 #footer-sidebar ul {
   clear: both;
   list-style-image: url("images/arrow.png");
   list-style-position: outside;
   padding-left: 20px;
 }
-/* line 141, portfolio.sass */
+/* line 147, portfolio.sass */
 #footer-sidebar ul li {
   list-style: inherit;
   border-bottom: 1px dotted #363848;
@@ -346,7 +356,7 @@ a, a:visited {
   padding: 6px 0;
 }
 
-/* line 147, portfolio.sass */
+/* line 153, portfolio.sass */
 #footer {
   padding: 20px 0 30px;
   color: #aaaaaa;

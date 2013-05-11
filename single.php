@@ -5,11 +5,10 @@
     <div id="main" class="col-full">
 <?php else: ?>
     <div class="single-project">
-        <div><a class="back-to-projects">&laquo;</a></div>
 <?php endif; ?>
         <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
         <div class="bisection">
-            <div class="section-left">&nbsp;</div>
+            <div class="section-left"><?php if(portfolio_is_ajax()): ?><a class="back-to-projects">&laquo; back</a><?php else: ?>&nbsp;<?php endif; ?></div>
             <div class="section-right">
                 <div class="post-part">
                     <h1><?php the_title(); ?></h1>
