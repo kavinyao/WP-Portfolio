@@ -45,7 +45,7 @@
       return $('.projects').show();
     });
     if (portfolio.conf.is_home) {
-      hash = location.hash.trim();
+      hash = $.trim(location.hash);
       if (hash.substring(0, 3) === '#!/') {
         slug = hash.substring(3);
         $the_post = $(".projects .project-load-trigger[data-slug=" + slug + "]");

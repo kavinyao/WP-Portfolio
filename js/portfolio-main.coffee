@@ -43,7 +43,7 @@ $ ()->
 
     if portfolio.conf.is_home
         # handle hash on initial load
-        hash = location.hash.trim()
+        hash = $.trim location.hash # use jQuery trim as IE7 does not support .trim
         if hash.substring(0, 3) == '#!/'
             slug = hash.substring(3)
             $the_post = $(".projects .project-load-trigger[data-slug=#{slug}]")
