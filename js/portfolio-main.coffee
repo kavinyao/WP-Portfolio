@@ -49,3 +49,7 @@ $ ()->
             $the_post = $(".projects .project-load-trigger[data-slug=#{slug}]")
             if $the_post.length
                 $the_post.click()
+
+    if portfolio.conf.is_singular
+        # enable fancybox on single page
+        $('.slide').fancybox()

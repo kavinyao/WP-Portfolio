@@ -50,9 +50,12 @@
         slug = hash.substring(3);
         $the_post = $(".projects .project-load-trigger[data-slug=" + slug + "]");
         if ($the_post.length) {
-          return $the_post.click();
+          $the_post.click();
         }
       }
+    }
+    if (portfolio.conf.is_singular) {
+      return $('.slide').fancybox();
     }
   });
 
